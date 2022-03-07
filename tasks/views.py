@@ -7,3 +7,7 @@ def helloWord(request):
 
 def taskslist(request):
     return render(request, 'tasks/list.html')
+
+def yourName(request, name):
+    return render(request,'tasks/yourName.html', {'name': name})
+
