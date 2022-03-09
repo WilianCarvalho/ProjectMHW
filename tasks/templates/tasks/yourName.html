@@ -1,1 +1,7 @@
-<h1>O seu nome é: {{name}}</h1>
+{% extends 'base.html'%}
+
+{%block title%}Nome do Cliente{% endblock %}
+
+{%block content%}
+<h1> Nome do Cliente: {{ name }}</h1>
+{%endblock%%}
