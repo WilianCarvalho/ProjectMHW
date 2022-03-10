@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import RegistroCliente
+from .models import RegistroContato
+
+admin.site.register(RegistroCliente)
+admin.site.register(RegistroContato)
