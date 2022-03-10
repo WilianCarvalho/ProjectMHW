@@ -42,6 +42,7 @@ class RegistroContato(models.Model):
         max_length = 3,
         choices = Situacao,
     ) 
+    NomComp = models.CharField(max_length=150)
     ObseCon = models.TextField()
     
     def __str__(self):

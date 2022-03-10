@@ -1,6 +1,9 @@
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.shortcuts import render
-from django.http import HttpResponse
+
+
+from .models import RegistroCliente 
+
 
 def helloWord(request):
     return HttpResponse('Hello Word')
@@ -8,8 +11,13 @@ def helloWord(request):
 def homepage(request):
     return render(request, 'tasks/homepage.html')
 
-def taskslist(request):
-    return render(request, 'tasks/list.html')
+def registrocontatos(request, name):
+    return render(request,'tasks/registrocontatos.html')
 
-def yourName(request, name):
-    return render(request,'tasks/yourName.html', {'name': name})
+def clientlist(request):
+    RegClientes = RegistroCliente.objects.all()
+    return render(request, 'tasks/clientlist.html',{'RegClientes': RegClientes})
+
+def CadCliente(request, id):
+    RegClientes = get_object_or_404(RegClientes, pk=id)
+    return render(request,'tasks/CadClientes.html', {'RegClientes': RegClientes})

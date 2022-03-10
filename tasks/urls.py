@@ -6,6 +6,7 @@ from . import views
 urlpatterns = [
     path('helloword/', views.helloWord),
     path('',views.homepage, name='Homepage'),
-    path('yourName/<str:name>', views.yourName, name='yourName' ),
-    #path("homepage", views.homepage, name="Pagina Inicial")
+    path('RegistroContatos/',views.registrocontatos, name='RegistroContatos'),
+    path('RegCliente/<int:id>', views.CadCliente, name="CadCliente"),
+    path('ListaClientes/',views.clientlist, name='ListaClientes'),
 ]
