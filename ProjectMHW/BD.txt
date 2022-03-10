@@ -1,0 +1,26 @@
+campos do banco de dados
+
+
+-Tabela Login
+   -Nome
+   -Login
+   -Senha
+   
+-Tabela de Clientes
+  -CNPJ
+  -Tipo Cliente
+  -Razão Social
+  -Fantasia
+  -Comprador
+  -Telefone1
+  -Telefone2
+  -WhatsApp
+  -E-mail
+
+-Tabela Registro de Contato
+  -Cliente
+  -Data
+  -Hora do Contato
+  -Tipo Contato (WhatsApp, e-mail, ligação)
+  -Situação
+  -Observação
