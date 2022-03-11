@@ -19,5 +19,5 @@ def clientlist(request):
     return render(request, 'tasks/clientlist.html',{'RegClientes': RegClientes})
 
 def CadCliente(request, id):
-    RegClientes = get_object_or_404(RegClientes, pk=id)
-    return render(request,'tasks/CadClientes.html', {'RegClientes': RegClientes})
+    CadCliente = get_object_or_404(RegistroCliente, pk = id)
+    return render(request, 'tasks/CadClientes.html', {'CadCliente': CadCliente})
