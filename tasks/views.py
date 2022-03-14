@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from .forms import NovoCliente
 
 
 from .models import RegistroCliente 
@@ -11,7 +12,7 @@ def helloWord(request):
 def homepage(request):
     return render(request, 'tasks/homepage.html')
 
-def registrocontatos(request, name):
+def registrocontatos(request):
     return render(request,'tasks/registrocontatos.html')
 
 def clientlist(request):
@@ -21,3 +22,7 @@ def clientlist(request):
 def CadCliente(request, id):
     CadCliente = get_object_or_404(RegistroCliente, pk = id)
     return render(request, 'tasks/CadClientes.html', {'CadCliente': CadCliente})
+
+def novoRegistro(request):
+    NovCli = NovoCliente
+    return render(request, 'tasks/NewClient.htm', {'NovCli':NovCli}) 
